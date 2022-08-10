@@ -1,0 +1,19 @@
+run = "R -s -f main.r"
+
+entrypoint = "main.r"
+
+onBoot = """
+[ -d "~/.config/R" ] || mkdir -p ~/.config/R
+"""
+
+[env]
+R_LIBS_USER = "~/.config/R"
+
+[packager]
+language = "rlang"
+
+[packager.features]
+packageSearch = true
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", ".Rprofile"]
