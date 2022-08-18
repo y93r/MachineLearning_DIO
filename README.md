@@ -16,5 +16,5 @@ Exercícios do Curso da DIO de Machine Learning Specialist
 
 ### Detecção Facial
 - Uso da biblioteca csv para abrir e salvar imagens;
-- Arquivos xml HaarCascade que são classificadores da face;
-- Com o uso da biblioteca cv2 foi colcoado os retângulos delimitadores no rosto das pessoas identificadas
+- Arquivos xml HaarCascade que são classificadores de face;
+- Com o uso da biblioteca cv2 foi colocado os retângulos delimitadores no rosto das pessoas identificadas
