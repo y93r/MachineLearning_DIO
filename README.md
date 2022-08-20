@@ -14,7 +14,10 @@ Exercícios do Curso da DIO de Machine Learning Specialist
 #### Transfer Learning
 - Utilizando a biblioteca TensorFlow.Keras para fazer Transfer Learning, facilitando o aprendizado da máquina com conhecimentos passados.
 
-### Detecção Facial
+#### Detecção Facial
 - Uso da biblioteca csv para abrir e salvar imagens;
 - Arquivos xml HaarCascade que são classificadores de face;
 - Com o uso da biblioteca cv2 foi colocado os retângulos delimitadores no rosto das pessoas identificadas
+
+#### Processameto de imagens
+- Biblioteca csv para processar imagens em hsv e filtro de sobel
