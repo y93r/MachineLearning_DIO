@@ -1,0 +1,42 @@
+import pyttsx3
+import speech_recognition as sr
+import webbrowser
+import pyaudio
+from pygame import mixer
+
+ia = pyttsx3.init()
+ia.say('Olá Yara, O que você deseja buscar?')
+ia.setProperty('voice', b'brazil')
+ia.setProperty('rate', 100)
+ia.setProperty('volume', 1)
+ia.runAndWait()
+
+reconhecimento = sr.Recognizer()
+with sr.Microphone() as source:
+    reconhecimento.adjust_for_ambient_noise(source)
+    audio = reconhecimento.listen(source)
+    
+try:
+    resposta = reconhecimento.recongnize_google(audio, language='pt-BR')
+    
+except:
+    ia.say('Desculpe, não entendi o que foi falado')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+
+if resposta == ("abra o email"):
+    ia.say('ok,abrindo o email')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 5)
+    ia.runAndWait()
+    webbrowser.open('https://mail.google.com/mail')
+elif resposta == ("Abra o site da DIO"):
+    ia.say('ok,abrindo o site da DIO')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 5)
+    ia.runAndWait()
+    webbrowser.open('https://web.dio.me/home')
